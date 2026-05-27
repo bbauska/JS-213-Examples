@@ -1,14 +1,7 @@
-# JS-200-Examples
-200 Examples of JavaScript.
-
+# 213 Examples of JavaScript (JS-213-Examples)
  
-200+ JavaScript Programs for Beginners
-By Hernando Abella
+213 JavaScript Programs for Beginners
  
-ALUNA PUBLISHING HOUSE
-Thank you for trusting our Publishing House. If you could evaluate our work and give us a comment on Amazon, we will appreciate it very much!
-This Book may not be copied or printed without the permission of the author.
-COPYRIGHT 2024 ALUNA PUBLISHING HOUSE
 Table of contents
 Intro
 1. Print Hello World
@@ -227,16 +220,28 @@ Intro
 217.	Next Prime Number
 218.	Reverse Order of Bits
 219.	Pyramid
-Intro
-Programming in JS was complicated until you appreciated this wonderful book.
-Focus on the most important thing writing code, starting from the first program to the last will help you quickly increase your skills as a programmer and will give you the knowledge necessary to understand:
-The flow of a program, the syntax, the direction, how it works, what Add keywords to your code, make great decisions, and much more.
-This is a very essential guide with which you can learn to create more than... Once you have solved a certain number of programs, you will be able to develop yourself and turn your own ideas into a reality without even having to think about it.
-1. Print Hello World
-The "Hello World" program is a classic in programming and is often the first program written when learning a new programming language. In this case, the goal is to print the text string "Hello, World!" to the browser console.
+
+## Intro
+Programming in JS was complicated until you appreciated this website.
+Focus on the most important thing writing code, starting from the first program to the last will help you quickly 
+increase your skills as a programmer and will give you the knowledge necessary to understand:
+The flow of a program, the syntax, the direction, how it works, what Add keywords to your code, make great decisions, 
+and much more.
+This is a very essential guide with which you can learn to create more than... Once you have solved a certain number 
+of programs, you will be able to develop yourself and turn your own ideas into a reality without even having to think 
+about it.
+
+### 1. Print Hello World
+The "Hello World" program is a classic in programming and is often the first program written when learning a 
+new programming language. In this case, the goal is to print the text string "Hello, World!" to the browser 
+console.
+```
 console.log("Hello, World!");
-2. Add Two Numbers
-This program focuses on taking two numbers as input and then displaying their sum. It prompts the user to enter two numbers, adds them together, and prints the result.
+```
+### 2. Add Two Numbers
+This program focuses on taking two numbers as input and then displaying their sum. It prompts the user to enter 
+two numbers, adds them together, and prints the result.
+```
 let num1 = parseFloat(prompt("Enter the first number:")); 
 let num2 = parseFloat(prompt("Enter the second number:"));
 if (!isNaN(num1) && !isNaN(num2)) [ 
@@ -244,33 +249,39 @@ if (!isNaN(num1) && !isNaN(num2)) [
   console.log(`The sum of ${num1) and $[num2} is: ${sum}`);
 } else {
   Console.log(“Please enter valid numbers. `1”);
-
-3. Find the Square Root
-This program prompts the user to enter a number and calculates its square root. It then displays the result, ensuring that the entered number is non-negative.
+```
+### 3. Find the Square Root
+This program prompts the user to enter a number and calculates its square root. It then displays the result, 
+ensuring that the entered number is non-negative.
+```
 let inputNumber = parseFloat(prompt("Enter a non-negative number:"));
 if (!isNaN(inputNumber) && inputNumber > = O) { let squareRoot = Math.sqrt(inputNumber); console.log( The square root of ${inputNumber} is: ${squareRoot} );
 } else {
   console.log(“Please enter a valid non-negative number.”);
-
-4. Calculate the Area of a Triangle
+```
+### 4. Calculate the Area of a Triangle
 This program prompts the user to enter the base and height of a triangle and calculates its area using the
-
 formula: Area= 12 xBasex HeightArea=21 xBase xHeight. It then displays the calculated area.
-let base = parseFloat(prompt("Enter the base of the triangle:")); let height = parseFloat(prompt("Enter the height of the triangle:"));
+```
+let base = parseFloat(prompt("Enter the base of the triangle:"));
+let height = parseFloat(prompt("Enter the height of the triangle:"));
 if  && !isNaN(height) && base > O && height > O) { let area = 0.5 * base * height; console.log(
  The area of the triangle with base $ {base} and height ${height} is: ${area} 
- enter valid positive numbers for base and height. 
-5. Swap Two Variables
+ enter valid positive numbers for base and height.
+```
+### 5. Swap Two Variables
 This program prompts the user to enter two variables and swaps their values. It then displays the variables before and after the swap.
+```
 let variablel = prompt("Enter the first variable:"); let variable2 = prompt("Enter the second variable:");
 console.log(
  Before swapping: Variablel = ${variablel), Variable2 = ${variabIe2) 
 // Swapping the variables let temp = variablel; variablel = variable2; variable2 = temp;
-console.log(
- After swapping: Variablel = ${variablel}, Variable2 = ${variabIe2) 
- 
-6. Solve Quadratic Equation
+console.log (
+ After swapping: Variablel = ${variablel}, Variable2 = ${variabIe2)
+```
+### 6. Solve Quadratic Equation
 solves a quadratic equation of the form axA2 + bx + c = O, where a, b, and c are coeffcients. It uses the quadratic formula to find the roots of the equation.
+```
 // Prompt user for coeffcients let a = parseFloat(prompt("Enter the coeffcient a:")); let b = parseFloat(prompt("Enter the coeffcient b:")); let c = parseFloat(prompt("Enter the coeffcient c:"));
 // Calculate the discriminant let discriminant = b ** 2 - 4 * a * c;
 // Check if roots are real if  [ if (discriminant > O) { let rootl = (-b + Math.sqrt(discriminant)) / (2 * a); let root2 = (-b - Math.sqrt(discriminant)) / (2 * a); console.log(
@@ -278,33 +289,40 @@ solves a quadratic equation of the form axA2 + bx + c = O, where a, b, and c are
 } else if (discriminant  let root = -b / (2 * a); console.log( The quadratic equation has a repeated root: ${root} );
 } else {
 console.log("The quadratic equation has complex roots.");
- else { console.log("Please enter valid numbers for coeffcients."); 
-Convert Kilometers to Miles
+ else { console.log("Please enter valid numbers for coeffcients.");
+```
+### 7. Convert Kilometers to Miles
 prompts the user to enter a distance in kilometers and converts it to miles using the conversion factor: 1 kilometer is approximately equal to 0.621371 miles. It then displays the converted distance.
+```
 // Prompt user for distance in kilometers let kilometers = parseFloat(prompt("Enter the distance in kilometers:")) 
 // Conversion factor const kilometersToMiIesConversionFactor = O. 6213 71 ;
 // Check if input is a valid number if (!isNaN(kilometers)) {
 // Convert kilometers to miles let miles = kilometers * kilometersToMilesConversionFactor; console.log( ${kilometers} kilometers is approximately $ [miles} miles. );  else { console.log("Please enter a valid number for the distance in kilometers. 'I);
- 
-Convert Celsius to Fahrenheit
+```
+### 8. Convert Celsius to Fahrenheit
 converts a temperature from Celsius to Fahrenheit using the formula: F = (C * 9/5) + 3 2 , where
 F is the temperature in Fahrenheit and C is the temperature in Celsius.
+```
 // Prompt user for temperature in Celsius let celsius = parseFloat(prompt("Enter the temperature in Celsius:"));
 // Check if input is a valid number if   {
 / / Convert Celsius to Fahrenheit let fahrenheit = (celsius * 9) / 5 + 32; console.log(
   $ [celsius} degrees Celsius is equal to $ {fahrenheit) degrees Fahrenheit. 
  enter a valid number for the temperature in Celsius.");
-Generate a Random Number
-generates a random number between a user-defined range. It prompts the user to enter the minimum and maximum values of the range, and then it displays the generated random number within that range.
+```
+### 9. Generate a Random Number
+Generates a random number between a user-defined range. It prompts the user to enter the minimum and maximum values of the range, and then it displays the generated random number within that range.
+```
 // Prompt user for the range let minRange = parseFloat(prompt("Enter the minimum value of the range:")); let maxRange = parseFloat(prompt("Enter the maximum value of the range:")) 
 // Check if input is a valid number if (!isNaN(minRange) && !isNaN(maxRange) && minRange < maxRange) {
 / / Generate a random number within the specified range let randomNumber = Math.random() * (maxRange - minRange) + minRange; console.log(
  A random number between $ [minRange} and ${maxRange) is: $ [randomNumber) 
  else { console.log(
 "Please enter valid numbers, ensuring that the minimum value is less than the maximum value."
-10. Check if a number is Positive, Negative, or Zero
+```
+### 10. Check if a number is Positive, Negative, or Zero
 prompts the user to enter a number and checks whether it is positive, negative, or zero. It then
 displays the result.
+```
 // Prompt user for a number let number = parseFloat(prompt("Enter a number:"));
 // Check if input is a valid number if (!isNaN(number)) {
 // Check if the number is positive, negative, or zero if (number > O) { console.log( $ {number} is a positive number. );
@@ -312,8 +330,8 @@ displays the result.
 } else {
  entered number is zero.");
  enter a valid number.");
- 
-11. Check if a Number is Odd or Even
+```
+### 11. Check if a Number is Odd or Even
 prompts the user to enter a number and checks whether it is odd or even. It then displays the result.
 // Prompt user for a number let number = parseInt(prompt("Enter a number:"));
 // Check if input is a valid integer if (!isNaN(number) && Number.islnteger(number)) {
