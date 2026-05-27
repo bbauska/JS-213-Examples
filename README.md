@@ -333,21 +333,26 @@ displays the result.
 ```
 ### 11. Check if a Number is Odd or Even
 prompts the user to enter a number and checks whether it is odd or even. It then displays the result.
+```
 // Prompt user for a number let number = parseInt(prompt("Enter a number:"));
 // Check if input is a valid integer if (!isNaN(number) && Number.islnteger(number)) {
 // Check if the number is odd or even if (number % 2 =  console.log( $ {number} is an even number. );
 } else { console.log( $ {number} is an odd number. );
  enter a valid integer.");
-12. Find the Largest Among Three Numbers
+```
+### 12. Find the Largest Among Three Numbers
 prompts the user to enter three numbers and determines and displays the largest among
 them.
+```
 // Prompt user for three numbers let num 1 = parseFloat(prompt("Enter the first number:")); let num2 = parseFloat(prompt("Enter the second number:")); let num3 = parseFloat(prompt("Enter the third number:"));
 // Check if inputs are valid numbers if  && !isNaN(num2) && !isNaN(num3)) {
 / / Find the largest among the three numbers let largestNumber = Math.max(numl, num2, num3); console.log(
  The largest number among $ {numl), $ [num2}, and $ {num3} is: $[IargestNumber) 
  enter valid numbers for all three inputs.");
-13. Check Prime Number
+```
+### 13. Check Prime Number
 prompts the user to enter a number and checks whether it is a prime number or not. It then displays the result.
+```
 // Prompt user for a number let number = parseInt(prompt("Enter a number:"));
 // Check if input is a valid integer greater than I if (!isNaN(number) && Number.islnteger(number) && number > I) { let isPrime = true;
 // Check for factors from 2 to the square root of the number for (let i = 2; i <= Math.sqrt(number); i+ +) { if (number % 1  isPrime = false;
@@ -355,9 +360,11 @@ break;
 // Display the result if (isPrime) { console.log( ${number} is a prime number. );
 } else { console.log( ${number} is not a prime number. );
  
- else { console.log("Please enter a valid integer greater than 1."); 
-14. Print All Prime Numbers in an Interval
+ else { console.log("Please enter a valid integer greater than 1.");
+```
+### 14. Print All Prime Numbers in an Interval
 prompts the user to enter a starting and ending number for an interval and then prints all the prime numbers within that interval.
+```
 // Prompt user for the interval let startNumber = parselnt( prompt("Enter the starting number of the interval:")
 let endNumber = parseInt(prompt("Enter the ending number of the interval:"));
 // Check if inputs are valid integers and the startNumber is less than the endNumber if(
@@ -371,38 +378,45 @@ if (isPrime) { console.log(i);
   else { console.log(
 "Please enter valid integers, ensuring that the starting number is less than the ending number and greater than I. "
  
-Find the Factorial of a Number
+### 15. Find the Factorial of a Number
 calculates 	factorial of a given number. The factorial of a non-negative integer n , denoted as n! , is the product of all positive integers less than or equal to n
- 
+```
 // Prompt user for a non-negative integer let number = parseInt(prompt("Enter a non-negative integer:"));
 // Check if input is a valid non-negative integer if (!isNaN(number) && Number.islnteger(number) && number > = O) {
 / / Calculate the factorial let factonal =  for (let i = I; i <= number; i++) { factorial * = i;
 console.log( The factorial of $ {number} is: $ [factorial] );  else { console.log("Please enter a valid non-negative integer.");
-Display the Multiplication Table
+```
+### 16. Display the Multiplication Table
 to enter a number and displays its multiplication table up to a specified range
 (e.g., up to 10).
+```
 // Prompt user for a number let number = parseInt(prompt("Enter a number for the multiplication table:"));
 // Check if input is a valid integer if (!isNaN(number) && Number.islnteger(number)) { / / Specify the range for the multiplication table const range = 10; console.log( Multiplication table for $ {number} (up to $ {range}): );
 // Display the multiplication table for (let i = I; i <= range; i++) { let result = number * i; console.log( ${number} x $[i} = ${result) );  enter a valid integer.");
-Print the Fibonacci Sequence
+```
+### 17. Print the Fibonacci Sequence
 to enter the number of terms and then prints the Fibonacci sequence up to
 that number of terms. The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, usually starting with O and 1.
+```
 // Prompt user for the number of terms in the Fibonacci sequence let numTerms = parselnt( prompt("Enter the number of terms in the Fibonacci sequence:")
 // Check if input is a valid integer if (!isNaN(numTerms) && Number.isInteger(numTerms) && numTerms > O) { console.log( Fibonacci sequence of $ {numTerms) terms: ); letfibArray = [O, 1] 
 // Generate the Fibonacci sequence for (let i = 2; i < numTerms; i++) { fibArray[i] = fibArray[i - I] + fibArray[i - 2];
 console.log(fibArray.join(", "));  else { console.log("Please enter a valid positive integer for the number of terms.");
- 
-18. Check Armstrong Number
+```
+### 18. Check Armstrong Number
 to enter a number and checks whether it is an Armstrong number or not. An Armstrong number (also known as a narcissistic number or pluperfect digital invariant) is a number that is the sum of its own digits each raised to the power of the number of digits in the number. For example, 153 is an Armstrong number because 13+ 53+33= 15313+53 +33 = 153 
+```
 // Prompt user for a number let number = parseInt(prompt("Enter a number:"));
 // Check if input is a valid positive integer if (!isNaN(number) Number.islnteger(number) && number > O) { let originalNumber = number; let numberOfDigits = originalNumber.toString().length; let sum = O;
 / / Calculate the sum of digits each raised to the power of the number of digits while (originalNumber > O) { let digit = originalNumber % 10; sum + = Math.pow(digit, numberOfDigits); originalNumber = Math.floor(originalNumber / 10);
 / / Check if the number is an Armstrong number
 if (sum = - = number) { console.log( $ {number} is an Armstrong number. );
 } else { console.log( $ {number} is not an Armstrong number. );  enter a valid positive integer."); 
-19. Find Armstrong Number in an Interval
+```
+### 19. Find Armstrong Number in an Interval
 prompts the user to enter a range (start and end) and then prints all Armstrong numbers
 within that interval.
+```
 // Prompt user for the interval let startNumber = parselnt( prompt("Enter the starting number of the interval:")
 let endNumber = parseInt(prompt("Enter the ending number of the interval:"));
 // Check if inputs are valid positive integers and the startNumber is less than the endNumber if (
@@ -411,14 +425,16 @@ let endNumber = parseInt(prompt("Enter the ending number of the interval:"));
 Number.isInteger(startNumber) && Number.isInteger(endNumber) && startNumber > O && startNumber < endNumber
 console.log(
  Armstrong numbers in the interval [$ {startNumber}, ${endNumber}]: 
-/ / Check for Armstrong numbers in the interval
+// Check for Armstrong numbers in the interval
 for (let i = startNumber; i < = endNumber; i+ +) { let originalNumber = i; let numberOfDigits = originalNumber.toString().length; let sum 
 while (originalNumber > O) { let digit = originalNumber % 10; sum + = Math.pow(digit, numberOfDigits); originalNumber = Math.floor(originalNumber / 10);
 if (sum 	i) { console.log(i);
  else { console.log(
 "Please enter valid positive integers, ensuring that the starting number is less than the ending number and both are greater than O."
-20. Make a Simple Calculator
+```
+### 20. Make a Simple Calculator
 implements a simple calculator that can perform basic arithmetic operations. It prompts the user to enter two numbers and choose an operation (addition, subtraction, multiplication, or division). It then performs the selected operation and displays the result.
+```
 // Prompt user for two numbers let num 1 = parseFloat(prompt("Enter the first number:")); let num2 = parseFloat(prompt("Enter the second number:"));
 // Check if inputs are valid numbers if (!isNaN(num1) && !isNaN(num2)) [ // Prompt user for the operation let operation = prompt(
 "Choose an operation (+ for addition, - for subtraction, * for multiplication, / for division):"
@@ -431,58 +447,68 @@ break; default:
 console.log("lnvalid operation. 'I); break;
 // Display the result if (result !== undefined) { console.log( Result of ${numl} ${operation} ${num2} is: ${result} );
  else { console.log("P1ease enter valid numbers.");
- 
-21. Find the Sum of Natural Numbers
+```
+### 21. Find the Sum of Natural Numbers
 This program calculates the sum of natural numbers up to a given positive integer n . The sum is calculated using the formula: sum = n* (n + 1) / 2
+```
 // Prompt user for a positive integer let n = parseInt(prompt("Enter a positive integer:"));
 // Check if input is a valid positive integer if (!isNaN(n) && Number.islnteger(n) && n > O) [ / / Calculate the sum of natural numbers let sum = (n* (n + I)) / 2; console.log( The sum of natural numbers from I to ${n) is: ${sum) );
  enter a valid positive integer. 
-22. Check if the Numbers Have the Same Last Digit
+```
+### 22. Check if the Numbers Have the Same Last Digit
 This program prompts the user to enter two numbers and checks if they have the same last digit.
+```
 // Prompt user for two numbers let numl = parseInt(prompt("Enter the first number:")); let num2 = parseInt(prompt("Enter the second number:"));
 // Check if inputs are valid integers if(
 !isNaN(numI) &&
 !isNaN(num2) &&
 Number.islnteger(num I ) &&
 Number.isInteger(num2)
-/ / Extract the last digit of each number let lastDigitI = Math.abs(numl % 10); let lastDigit2 = Math.abs(num2 % 10);
+// Extract the last digit of each number let lastDigitI = Math.abs(numl % 10); let lastDigit2 = Math.abs(num2 % 10);
 // Check if the last digits are the same if (lastDigit1 lastDigit2) { console.log(
  The last digit of $ {numl) is the same as the last digit of $ [num2}. 
 } else {
 console.log(
  The last digit of $ {numl) is different from the last digit of $ {num2}. 
   enter valid integers."); 
-23. Find HCF or GCD
+  ```
+### 23. Find HCF or GCD
 This program prompts the user to enter two positive integers and calculates their Highest Common Factor (HCF) or Greatest Common Divisor (GCD).
+```
 // Prompt user for two positive integers let numl = parseInt(prompt("Enter the first positive integer:")); let num2 = parseInt(prompt("Enter the second positive integer:"));
 // Check if inputs are valid positive integers if (!isNaN(numI) && !isNaN(num2) && Number.islnteger(numl) && Number.isInteger(num2) && num I > O && num2 > O) {
 // Find the HCF or GCD let smallerNumber = Math.min(numl, num2); let hcf= I;
 for (let i = 1; i < = smallerNumber; i+ + ) { if(numl % i O && num2 % 1 O) [ hcf = i;
-console.log( The HCF (GCD) of ${numl} and ${num2} is: ${hcf} );  else {  enter valid positive integers. 
-24. Find LCM
+console.log( The HCF (GCD) of ${numl} and ${num2} is: ${hcf} );  else {  enter valid positive integers.
+```
+### 24. Find LCM
 This program prompts the user to enter two positive integers and calculates their Least Common Multiple (LCM).
+```
 // Prompt user for two positive integers let numl = parseInt(prompt("Enter the first positive integer:")); let num2 = parseInt(prompt("Enter the second positive integer:"));
 // Check if inputs are valid positive integers if (!isNaN(numI) && !isNaN(num2) && Number.islnteger(numl) && Number.isInteger(num2) && num I > O && num2 > O) [ // Find the LCM let largerNumber = Math.max(num I, num2); let lcm = largerNumber; while (true) {
 if (lcm % num 1 =	O && lcm % num2 	O) { console.log( The LCM of ${numl} and ${num2} is: ${lcm} ); break;
 lcm + = largerNumber;
  else { console.log("Please enter valid positive integers. "); 
-25. Find the Factors of a Number
+```
+### 25. Find the Factors of a Number
 This program prompts the user to enter a positive integer and calculates and displays its factors.
+```
 // Prompt user for a positive integer let number = parseInt(prompt("Enter a positive integer:"));
 // Check if input is a valid positive integer if (!isNaN(number) && Number.islnteger(number) && number > O) { console.log( Factors of ${number): );
 // Find and display the factors for (let i = 1; i number; i++) { if (number % 1  console.log(i);
  else { console.log("Please enter a valid positive integer.");
-26. Find Sum of Natural Numbers Using Recursion
+```
+### 26. Find Sum of Natural Numbers Using Recursion
 This program calculates the sum of natural numbers up to a given positive integer using recursion. It prompts the user to enter a positive integer n and then calculates and displays the sum using a recursive function.
+```
 // Define a recursive function to calculate the sum of natural numbers function sumOfNaturalNumbers(n) { if(n 	1) { return 1;  else { return n + sumOfNaturalNumbers(n - 
 // Prompt user for a positive integer let number =  a positive integer:"));
 // Check if input is a valid positive integer if (!isNaN(number) Number.islnteger(number) number > O) {
 // Calculate and display the sum using recursion let sum = sumOfNaturalNumbers(number); console.log( The sum of natural numbers up to ${number} is: $ [sum} );  else { console.log("Please enter a valid positive integer.");
- 
-
- 
-27. Guess a Random Number
+```
+### 27. Guess a Random Number
 This program generates a random number between a specified range and allows the user to guess the number. It provides feedback on whether the guessed number is too high, too low, or correct. The user continues guessing until they correctly identify the random number.
+```
 // Generate a random number between 1 and 100 (you can adjust the range) const randomNumber = Math.floor(Math.random() * 100) + 1;
 // Initialize variables let userGuess; let attempts = O;
 // Game loop do {
@@ -491,8 +517,10 @@ This program generates a random number between a specified range and allows the 
 // Provide feedback to the user if (userGuess < randomNumber) { console.log("Too low! Try again.");  else if (userGuess > randomNumber) { console.log("Too high! Try again.");  else { console.log( Congratulations! You guessed the correct number $ [randomNumber) in $ {attempts} attempts. ' );
  else { console.log("Please enter a valid number.");
  while (userGuess randomNumber);
-28. Shuffle Deck of Cards
+```
+### 28. Shuffle Deck of Cards
 This program simulates shuffling a standard deck of playing cards. It generates a deck of cards, displays the initial order, shuffles the deck, and then displays the shuffled order.
+```
 // Function to create a standard deck of cards function createDeck() [ const suits = ["Hearts", "Diamonds", "Clubs", "Spades"]; const ranks = ["2", "3", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King", "Ace"]; let deck = [l;
 for (let suit of suits) { for (let rank of ranks) [
 deck.push( ${rank} of ${suit} );
@@ -502,34 +530,42 @@ return deck;
 // Create and display an initial deck of cards const initialDeck = createDeck(); console.log("lnitial Deck:"); console.log(initialDeck);
 // Shuffle the deck and display the shuffled deck const shuffledDeck = [...initiaIDeck]; // Create a copy to avoid modifying the original shuffleDeck(shumedDeck);
  Deck:"); console.Iog(shuffedDeck);
-29. Display Fibonacci Sequence Using Recursion
+```
+### 29. Display Fibonacci Sequence Using Recursion
 This program displays the Fibonacci sequence up to a specified number of terms using recursion. It prompts the user to enter the number of terms and then uses a recursive function to generate and display the Fibonacci sequence.
+```
 // Function to generate the Fibonacci sequence using recursion function fibonacci(n) { if (n <  return n;  else { return fibonacci(n - 1) + fibonacci(n - 2);
 // Prompt user for the number of terms in the Fibonacci sequence let numTerms = parseInt(prompt("Enter the number of terms in the Fibonacci sequence:")) 
 // Check if input is a valid non-negative integer if (!isNaN(numTerms) && Number.isInteger(numTerms) && numTerms > = O) { console.log( Fibonacci sequence of $ [numTerms} terms: 
 // Display the Fibonacci sequence using recursion for (let i = O; i < numTerms; i++) {
  
  else { console.log("Please enter a valid non-negative integer for the number of terms.  
-30. Find Factorial of Number Using Recursion
+```
+### 30. Find Factorial of Number Using Recursion
 This program calculates the factorial of a given non-negative integer using recursion. It prompts the user to enter a non-negative integer and then uses a recursive function to compute and display its factorial.
+```
 // Function to calculate the factorial using recursion function factorial(n) {  01  return 1;  else { return n * factorial(n - 1);
 // Prompt user for a non-negative integer let number =  a non-negative integer:"));
 // Check if input is a valid non-negative integer if (!isNaN(number) Number.islnteger(number) number > = O) {
 // Calculate and display the factorial using recursion let result = factorial(number); console.log( The factorial of $ {number} is: $ {result} );  else { console.log("Please enter a valid non-negative integer.");
-31. Convert Decimal to Binary
+```
+### 31. Convert Decimal to Binary
 This program converts a decimal number to its binary equivalent. It prompts the user to enter a decimal number and then calculates and displays its binary representation.
+```
 // Function to convert decimal to binary function decimalToBinary(decimalNumber) { if (decimalNumber = = = O)  return "O";
 let binaryResuIt = '  while (decimalNumber > O) [ let remainder = decimalNumber %2; binaryResuIt = remainder + binaryResuIt; decimalNumber = Math.floor(decimaINumber / 2); return binaryResult;
 // Prompt user for a decimal number let decimalNumber =   a decimal number:"));
 // Check if input is a valid integer if (!isNaN(decimalNumber) Number.isInteger(decimalNumber) && decimalNumber > = O) {
 // Convert and display the binary equivalent let binaryEquivalent = decimalToBinary(decimalNumber); console.log( The binary equivalent of $ {decimalNumber} is: $ {binaryEquivalent} );  else { console.log("Please enter a valid non-negative integer.");
-32. Find ASCII Value of Character
+```
+### 32. Find ASCII Value of Character
 This program prompts the user to enter a character and then calculates and displays its ASCII value.
 // Prompt user for a character let character =  a character:");
 // Check if input is a valid single character if (character.length === 1) {
 // Calculate and display the ASCII value let asciiValue = character.charCodeAt(O); console.log( The ASCII value of'${character}' is: ${asciiValue) );  else { console.log("Please enter a valid single character."); 
-33. Check Whether a String is Palindrome or Not
+### 33. Check Whether a String is Palindrome or Not
 This program checks whether a given string is a palindrome or not. A palindrome is a string that reads the same forward as backward.
+```
 // Function to check if a string is a palindrome function isPalindrome(str) {
 // Remove non-alphanumeric characters and convert to lowercase const cleanStr = str.replace(/[Aa-zA-ZO-9]/g, ").toLowerCase();
 // Compare the original and reversed strings return cleanStr = 
@@ -538,18 +574,21 @@ This program checks whether a given string is a palindrome or not. A palindrome 
 // Check and display if the string is a palindrome if (isPaIindrome(inputString)) [ console.log( "${inputString}" is a palindrome. );
 ) else { console.log( "${inputString}" is not a palindrome. );
 ) else {
-console.log("Please enter a valid string."); 
-34. Sort Words in Alphabetical Order
+console.log("Please enter a valid string.");
+```
+### 34. Sort Words in Alphabetical Order
 This program prompts the user to enter a sentence or a list of words and then sorts and displays the words in alphabetical order.
+```
 // Prompt user for a sentence or a list of words let inputString = prompt("Enter a sentence or a list of words:");
 // Check if input is a valid string if (inputString.Iength > O) {
 // Split the input into an array of words let wordsArray = inputString.spIit(/\s+/);
 // Sort the array of words in alphabetical order let sortedWords = wordsArray.sort();
 // Display the sorted words
- 
 ) else {  enter a valid string.");
-35. Replace Characters of a String
+```
+### 35. Replace Characters of a String
 This program prompts the user to enter a string, a target character, and a replacement character. It then replaces all occurrences of the target character with the replacement character and displays the modified string.
+```
 // Prompt user for a string let inputString = prompt("Enter a string:");
 // Check if input is a valid string if (inputString.Iength > O) {
 // Prompt user for a target character and a replacement character let targetChar = 	the target character:"); let replacementChar = 	the replacement character:");
@@ -558,25 +597,33 @@ This program prompts the user to enter a string, a target character, and a repla
 // Display the modified string console.log( Modified String: $ {modifiedString} );
 ) else {  enter a valid target character (single character).");
 ) else {
-console.log("Please enter a valid string."); 
-36. Reverse a String
+console.log("Please enter a valid string.");
+```
+### 36. Reverse a String
 This program prompts the user to enter a string and then reverses and displays the characters of the string.
+```
 // Prompt user for a string let inputString = prompt("Enter a string:");
 // Check if input is a valid string if (inputString.Iength > O) [ // Reverse the string let reversedString = 
 // Display the reversed string console.log( Reversed String: ${reversedString} );  else { console.log("Please enter a valid string.");
-37. Check the Number of Occurrences of a Character in the String
+```
+### 37. Check the Number of Occurrences of a Character in the String
 This program checks the number of occurrences of a character in a given string:
+```
 // Prompt user for a string and a character let inputString = prompt("Enter a string:"); let targetChar = prompt("Enter the character to count:");
 // Check if input is valid if (inputString.Iength > O && targetChar.Iength  // Count occurrences of the target character let count = O  for (let i = O; i < inputString.Iength; i++) [ if (inputString[i] = targetChar) { count ++ ;
 // Display the result console.log( Number of occurrences of ' $ {targetChar}' in '${inputstring}': $ {count} );  else { console.log("Please enter a valid string and a single character. l');
-38. Convert the First Letter of a String into UpperCase
+```
+### 38. Convert the First Letter of a String into UpperCase
 This program converts the first letter of a string to uppercase:
+```
 // Prompt user for a string let inputString = prompt("Enter a string:");
 // Check if input is a valid string if (inputString.Iength > O) {
 // Convert the first letter to uppercase let resultString =   + inputString.sIice(I);
 // Display the result console.log( Original String: $ {inputstring} ); console.log( String with First Letter Uppercase: ${resultstring} );  else { console.log("Please enter a valid string.");
-39. Count the Number of Vowels in a String
+```
+### 39. Count the Number of Vowels in a String
 This program counts the number of vowels in a given string:
+```
 // Prompt user for a string let inputString = prompt("Enter a string:");
 // Check if input is a valid string if (inputString.Iength > O) {
 // Function to count vowels in a string function countVoweIs(str) [ const vowels = "aeiouAEIOU"; let vowelCount = O;
@@ -584,85 +631,116 @@ for (let char of str) { if (vowels.includes(char)) { vowelCount+ + ;
 return vowelCount;
 // Call the function and display the result let numberOfVowels = countVowels(inputString); console.log( Number of vowels in ' $ {inputstring}': $ [numberOfVowels} );
  else { console.log("Please enter a valid string."); 
-40. Check Whether a String Starts and Ends
+```
+### 40. Check Whether a String Starts and Ends
 With Certain Characters
 This program checks whether a string starts and ends with certain characters using the startsWith and endsWith methods in JavaScript:
+```
 // Prompt user for a string let inputString = prompt("Enter a string:");
 // Check if input is a valid string if (inputString.Iength > O) {
 // Prompt user for start and end characters let startChar = prompt("Enter the starting characters:");
 let endChar =  the ending characters:");
 // Check if the string starts and ends with the specified characters if (inputString.startsWith(startChar) && inputString.endsWith(endChar)) { console.log( The string '${inputstring}' starts with '$[startChar}' and ends with '$[endChar}'. );  else { console.log( The string '${inputstring}' does not start with ' $ {startChar}' or does not end with '${endChar}'. 
  else { console.log("Please enter a valid string.");
- 
-Replace All Occurrences of a String
- 
+```
+### 41. Replace All Occurrences of a String
 Replace all occurrences of a substring in a string in JavaScript, you can use the replace() method along with a regular expression with the global ( g ) flag.
+```
 // Example string let originalString = "Hello world, world!" •
 // String to replace let searchString = "world";
 // Replacement string let replacementstring = "universe";
 // Replace all occurrences using replace() with a global regex let modifiedString = originalString.repIace(new RegExp(searchString, 'g'), replacementString);
 // Display the result console.log( Original String: $ {originalString} ); console.log( Modified String: $ {modifiedString} ' );
-42. Create Multiline Strings
+```
+### 42. Create Multiline Strings
 This program creates multiline strings using template literals (introduced in ECMAScript 6).
 // Multiline string using template literals let multilineString =  
 This is a multiline string.
 It spans multiple lines.
 You can include line breaks and indentation easily.
-console.Iog(muItiIineString); 
+```
+console.Iog(muItiIineString);
+```
 Format Numbers as Currency Strings
 This program format numbers as currency strings:
-// Example number let amount = 1234567.89;
-// Format as currency string let formattedAmount = amount.toLocaleString('en-US', { style: 'currency, currency: 'USD J);
-// Display the formatted currency string console.log( Formatted Amount: $ {formattedAmount} ); 
-44. Generate Random String
+
+// Example number 
+```
+let amount = 1234567.89;
+```
+// Format as currency string 
+```
+let formattedAmount = amount.toLocaleString('en-US', { style: 'currency, currency: 'USD J);
+```
+// Display the formatted currency string 
+```
+console.log( Formatted Amount: $ {formattedAmount} ); 
+```
+### 44. Generate Random String
 This program generates a random string in JavaScript, you can create a function that generates a string with random characters.
-function generateRandomString(length) { const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijk1mnopqrstuvwxyz0123456789'; let randomString = 
-for (let i = O; i < length; i++) { const randomlndex =  * characters.length); randomString + = characters.charAt(randomIndex);
+```
+function generateRandomString(length) { 
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijk1mnopqrstuvwxyz0123456789'; 
+  let randomString = for (let i = O; i < length; i++) { const randomlndex =  * characters.length); 
+  randomString + = characters.charAt(randomIndex);
 return randomString;
-// Generate a random string of length 8 let randomString = generateRandomString(8);
-// Display the random string console.log( Random String: $ [randomstring) );
+// Generate a random string of length 8 
+let randomString = generateRandomString(8);
+// Display the random string 
+console.log( Random String: $ [randomstring) );
 Check if a String Starts with Another String
- 
 This program checks if a string starts with another string using the startsWith method.
-// Example strings let mainString = "Hello, World!"  let searchString = "Hello";
-// Check if mainString starts with searchString let startsWith = mainString.startsWith(searchString);
-// Display the result console.log( Does the string start with '${searchString}'? $ {startsWith} ); 
-46. Trim a String
- 
+// Example strings 
+let mainString = "Hello, World!"  let searchString = "Hello";
+// Check if mainString starts with searchString 
+let startsWith = mainString.startsWith(searchString);
+// Display the result 
+console.log( Does the string start with '${searchString}'? $ {startsWith} ); 
+```
+### 46. Trim a String
 This program trims leading and trailing whitespaces from a string using the trim() method.
-// Example string with leading and trailing whitespaces let stringWithSpaces = " Hello, World! ' 
-// Trim the string let trimmedString = stringWithSpaces.trim();
-// Display the result console.log( Original String: ' $ [stringWithSpaces}' ); console.log( Trimmed String: '${trimmedString}' ); 
+```
+// Example string with leading and trailing whitespaces 
+let stringWithSpaces = " Hello, World! ' 
+// Trim the string 
+let trimmedString = stringWithSpaces.trim();
+// Display the result 
+console.log( Original String: ' $ [stringWithSpaces}' ); console.log( Trimmed String: '${trimmedString}' ); 
+
 Check Whether a String Contains a Substring
- 
 This program checks whether a string contains a substring in JavaScript using the includes() method or the indexOf() method.
-// Example string let mainString = "Hello, World!"  let substringToCheck = "World";
-// Check if mainString contains substringToCheck let containsSubstring = mainString.incIudes(substringToCheck);
-// Display the result console.log( Does the string contain '${substringToCheck}'? $ {containssubstring} );
- 
-48. Compare Two Strings
+// Example string 
+let mainString = "Hello, World!"  let substringToCheck = "World";
+// Check if mainString contains substringToCheck 
+let containsSubstring = mainString.incIudes(substringToCheck);
+// Display the result 
+console.log( Does the string contain '${substringToCheck}'? $ {containssubstring} );
+```
+### 48. Compare Two Strings
 compare two strings in JavaScript, you can use the standard comparison operators ( - , ! 
- 
+```
 // Example strings let stringl = "Hello"; let string2 = "hello";
 // Case-sensitive comparison let caseSensitiveComparison = stringl string2;
 // Case-insensitive comparison let caselnsensitivecomparison = string1.toLowerCase() string2.toLowerCase();
 // Display the results console.log( Case-sensitive comparison: $ (caseSensitiveComparison) ); console.log( Case-insensitive comparison: ${caseInsensitiveComparison} );
-49. Encode a String to Base64
- 
+```
+### 49. Encode a String to Base64
 This program encode a string to Base64 in JavaScript, you can use the btoa() function.
+```
 let originalString = "Hello, f$Fff 
 // Encode the string to Base64 (for non-ASCII characters) let base64EncodedString = 
 // Display the result console.log( Original String: $ {originalString} ); console.log( Base64 Encoded String: ${base64EncodedString} ); 
-50. Replace all Instances of a Character in a String
- 
+```
+### 50. Replace all Instances of a Character in a String
 replace all instances of a character in a string in JavaScript, you can use the replace() method with a regular expression.
+```
 // Example string let originalString = "Hello, World!"'
 // Character to replace let charToRepIace = 
 // Replacement character let replacementChar = "x";
 // Replace all instances of charToRepIace with replacementChar let modifiedString = originalString.repIace(new RegExp(charToRepIace, 'g'), replacementChar);
 // Display the result console.log( Original String: $ {originalString} ); console.log( Modified String: $ {modifiedString} ' );
- 
-51. Replace All Line Breaks with
+```
+### 51. Replace All Line Breaks with
 replace all line breaks (newline characters) in a string with a specific string or character, you can use the replace() method with a regular expression.
 // Example string with line breaks let stringWithLineBreaks = "Hello,\nWorld!\nThis is a new line. ";
 // Replacement string or character let replacementString = 
