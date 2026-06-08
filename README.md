@@ -223,14 +223,9 @@
 219. Pyramid
 
 ## Intro
-Programming in JS was complicated until you appreciated this website.
-Focus on the most important thing writing code, starting from the first program to the last will help you quickly 
-increase your skills as a programmer and will give you the knowledge necessary to understand:
-The flow of a program, the syntax, the direction, how it works, what Add keywords to your code, make great decisions, 
-and much more.
-This is a very essential guide with which you can learn to create more than... Once you have solved a certain number 
-of programs, you will be able to develop yourself and turn your own ideas into a reality without even having to think 
-about it.
+Quick examples of JavaScript. Tips, tricks and techniques used in JS.
+You will increase your skills as a programmer. Giving you some knowledge necessary to understand how JavaScript
+works.
 
 ### 1. Print Hello World
 The "Hello World" program is a classic in programming and is often the first program written when learning a 
