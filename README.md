@@ -251,51 +251,208 @@ This program prompts the user to enter a number and calculates its square root. 
 ensuring that the entered number is non-negative.
 ```
 let inputNumber = parseFloat(prompt("Enter a non-negative number:"));
-if (!isNaN(inputNumber) && inputNumber > = O) { let squareRoot = Math.sqrt(inputNumber); console.log( The square root of ${inputNumber} is: ${squareRoot} );
-} else {
-  console.log(“Please enter a valid non-negative number.”);
+if (!isNaN(inputNumber) && inputNumber >= 0) {
+  let squareRoot = Math.sqrt(inputNumber); 
+  console.log(`The square root of ${inputNumber} is: ${squareRoot}`);
+  } else {
+    console.log("Please enter a valid non-negative number.");
+  }
 ```
 ### 4. Calculate the Area of a Triangle
-This program prompts the user to enter the base and height of a triangle and calculates its area using the
-formula: Area= 12 xBasex HeightArea=21 xBase xHeight. It then displays the calculated area.
+This program prompts the user to enter the base and height of a triangle and calculates its area 
+using the formula: Area = 10 x Base x HeightArea = 5 x Base x Height. It then displays the calculated area.
+```
+// Function to find area using base and height
+function getAreaByBaseHeight(base, height) {
+    return (base * height) / 2;
+}
+
+// Example usage
+const base = 10;
+const height = 5;
+const area = getAreaByBaseHeight(base, height);
+
+console.log(`The area of the triangle is: ${area}`); // Output: 25
+```
+
 ```
 let base = parseFloat(prompt("Enter the base of the triangle:"));
 let height = parseFloat(prompt("Enter the height of the triangle:"));
 if  && !isNaN(height) && base > O && height > O) { let area = 0.5 * base * height; console.log(
- The area of the triangle with base $ {base} and height ${height} is: ${area} 
- enter valid positive numbers for base and height.
+The area of the triangle with base $ {base} and height ${height} is: ${area} 
+enter valid positive numbers for base and height.
+```
+
+```
+// Function to find area using three sides
+function getAreaBySides(side1, side2, side3) {
+    // 1. Validate that the sides can actually form a valid triangle
+    if (side1 + side2 <= side3 || side1 + side3 <= side2 || side2 + side3 <= side1) {
+        return "Invalid triangle sides";
+    }
+
+    // 2. Calculate the semi-perimeter
+    const s = (side1 + side2 + side3) / 2;
+
+    // 3. Apply Heron's formula
+    const area = Math.sqrt(s * (s - side1) * (s - side2) * (s - side3));
+    return area;
+}
+
+// Example usage
+const a = 5;
+const b = 6;
+const c = 7;
+console.log(`The area of the triangle is: ${getAreaBySides(a, b, c)}`); //
 ```
 ### 5. Swap Two Variables
-This program prompts the user to enter two variables and swaps their values. It then displays the variables before and after the swap.
+This program prompts the user to enter two variables and swaps their values. It then displays 
+the variables before and after the swap.
 ```
 let variable1 = prompt("Enter the first variable:");
 let variable2 = prompt("Enter the second variable:");
-console.log(Before swapping: Variable1 = ${variablel}, Variable2 = ${variabIe2})
+
+console.log("Before swapping:");
+console.log(`Variable1 = ${variable1}, Variable2 = ${variable2}`);
+
 // Swapping the variables
-let temp = variablel;
-variablel = variable2;
+let temp = variable1;
+variable1 = variable2;
 variable2 = temp;
-console.log (After swapping: Variablel = ${variablel}, Variable2 = ${variabIe2})
+console.log("After swapping:");
+console.log(`Variable1 = ${variable1}, Variable2 = ${variable2}`);
 ```
 ### 6. Solve Quadratic Equation
-solves a quadratic equation of the form axA2 + bx + c = O, where a, b, and c are coeffcients. It uses the quadratic formula to find the roots of the equation.
+Solves a quadratic equation of the form axA2 + bx + c = 0, where a, b, and c are coeffcients. It 
+uses the quadratic formula to find the roots of the equation.
 ```
-// Prompt user for coeffcients let a = parseFloat(prompt("Enter the coeffcient a:")); let b = parseFloat(prompt("Enter the coeffcient b:")); let c = parseFloat(prompt("Enter the coeffcient c:"));
-// Calculate the discriminant let discriminant = b ** 2 - 4 * a * c;
-// Check if roots are real if  [ if (discriminant > O) { let rootl = (-b + Math.sqrt(discriminant)) / (2 * a); let root2 = (-b - Math.sqrt(discriminant)) / (2 * a); console.log(
- The roots of the quadratic equation are: ${rootl} and ${root2}  
-} else if (discriminant  let root = -b / (2 * a); console.log( The quadratic equation has a repeated root: ${root} );
-} else {
-console.log("The quadratic equation has complex roots.");
- else { console.log("Please enter valid numbers for coeffcients.");
+// Prompt user for coeffcients
+let a = parseFloat(prompt("Enter the coeffcient a:"));
+let b = parseFloat(prompt("Enter the coeffcient b:"));
+let c = parseFloat(prompt("Enter the coeffcient c:"));
+// Calculate the discriminant
+let discriminant = b ** 2 - 4 * a * c;
+// Check if roots are real
+if  { if (discriminant > 0) { 
+  let rootl = (-b + Math.sqrt(discriminant)) / (2 * a);
+  let root2 = (-b - Math.sqrt(discriminant)) / (2 * a); 
+  console.log("The roots of the quadratic equation are: ${rootl} and ${root2};
+  } 
+  else if (discriminant === 0) {
+  let root = -b / (2 * a); 
+  console.log("The quadratic equation has a repeated root: ${root}");
+  } else {
+    console.log("The quadratic equation has complex roots."); }
+  else { 
+    console.log("Please enter valid numbers for coeffcients."); }
 ```
+
+```
+function solveQuadratic(a, b, c) {
+    // Validate that it is a valid quadratic equation
+    if (a === 0) {
+        if (b === 0) {
+            return { type: "No solution", roots: [] };
+        }
+        // Linear equation fallback (bx + c = 0)
+        return { type: "Linear", roots: [-c / b] };
+    }
+
+    // Calculate the discriminant: b² - 4ac
+    const discriminant = (b * b) - (4 * a * c);
+
+    if (discriminant > 0) {
+        // Two distinct real roots
+        const root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+        const root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+        return { type: "Two Real Roots", roots: [root1, root2] };
+    } 
+    else if (discriminant === 0) {
+        // One repeated real root
+        const root = -b / (2 * a);
+        return { type: "One Real Root", roots: [root] };
+    } 
+    else {
+        // Two complex roots (discriminant < 0)
+        const realPart = (-b / (2 * a)).toFixed(2);
+        const imaginaryPart = (Math.sqrt(-discriminant) / (2 * a)).toFixed(2);
+        
+        return { 
+            type: "Complex Roots", 
+            roots: [
+                `${realPart} + ${imaginaryPart}i`, 
+                `${realPart} - ${imaginaryPart}i`
+            ] 
+        };
+    }
+}
+
+// --- Example Test Cases ---
+console.log(solveQuadratic(1, -5, 6));   
+// Output: { type: 'Two Real Roots', roots: [ 3, 2 ] }
+
+console.log(solveQuadratic(1, 2, 1));    
+// Output: { type: 'One Real Root', roots: [ -1 ] }
+
+console.log(solveQuadratic(1, 2, 5));    
+// Output: { type: 'Complex Roots', roots: [ '-1.00 + 2.00i', '-1.00 - 2.00i' ] }
+
+```
+
+```
+// program to solve quadratic equation
+let root1, root2;
+
+// take input from the user
+let a = prompt("Enter the first number: ");
+let b = prompt("Enter the second number: ");
+let c = prompt("Enter the third number: ");
+
+// calculate discriminant
+let discriminant = b * b - 4 * a * c;
+
+// condition for real and different roots
+if (discriminant > 0) {
+    root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+    root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+
+    // result
+    console.log(`The roots of quadratic equation are ${root1} and ${root2}`);
+}
+
+// condition for real and equal roots
+else if (discriminant == 0) {
+    root1 = root2 = -b / (2 * a);
+
+    // result
+    console.log(`The roots of quadratic equation are ${root1} and ${root2}`);
+}
+
+// if roots are not real
+else {
+    let realPart = (-b / (2 * a)).toFixed(2);
+    let imagPart = (Math.sqrt(-discriminant) / (2 * a)).toFixed(2);
+
+    // result
+    console.log(
+    `The roots of quadratic equation are ${realPart} + ${imagPart}i and ${realPart} - ${imagPart}i`
+  );
+}
+```
+
 ### 7. Convert Kilometers to Miles
 prompts the user to enter a distance in kilometers and converts it to miles using the conversion factor: 1 kilometer is approximately equal to 0.621371 miles. It then displays the converted distance.
 ```
-// Prompt user for distance in kilometers let kilometers = parseFloat(prompt("Enter the distance in kilometers:")) 
-// Conversion factor const kilometersToMiIesConversionFactor = O. 6213 71 ;
-// Check if input is a valid number if (!isNaN(kilometers)) {
-// Convert kilometers to miles let miles = kilometers * kilometersToMilesConversionFactor; console.log( ${kilometers} kilometers is approximately $ [miles} miles. );  else { console.log("Please enter a valid number for the distance in kilometers. 'I);
+// Prompt user for distance in kilometers 
+let kilometers = parseFloat(prompt("Enter the distance in kilometers:")) 
+// Conversion factor 
+const kilometersToMiIesConversionFactor = 0.621371;
+// Check if input is a valid number
+if (!isNaN(kilometers)) {
+// Convert kilometers to miles 
+  let miles = kilometers * kilometersToMilesConversionFactor;
+  console.log( ${kilometers} kilometers is approximately $ [miles} miles. );  
+  else { console.log("Please enter a valid number for the distance in kilometers. 'I);
 ```
 ### 8. Convert Celsius to Fahrenheit
 converts a temperature from Celsius to Fahrenheit using the formula: F = (C * 9/5) + 3 2 , where
