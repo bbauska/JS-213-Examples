@@ -268,12 +268,14 @@ if  && !isNaN(height) && base > O && height > O) { let area = 0.5 * base * heigh
 ### 5. Swap Two Variables
 This program prompts the user to enter two variables and swaps their values. It then displays the variables before and after the swap.
 ```
-let variablel = prompt("Enter the first variable:"); let variable2 = prompt("Enter the second variable:");
-console.log(
- Before swapping: Variablel = ${variablel), Variable2 = ${variabIe2) 
-// Swapping the variables let temp = variablel; variablel = variable2; variable2 = temp;
-console.log (
- After swapping: Variablel = ${variablel}, Variable2 = ${variabIe2)
+let variable1 = prompt("Enter the first variable:");
+let variable2 = prompt("Enter the second variable:");
+console.log(Before swapping: Variable1 = ${variablel}, Variable2 = ${variabIe2})
+// Swapping the variables
+let temp = variablel;
+variablel = variable2;
+variable2 = temp;
+console.log (After swapping: Variablel = ${variablel}, Variable2 = ${variabIe2})
 ```
 ### 6. Solve Quadratic Equation
 solves a quadratic equation of the form axA2 + bx + c = O, where a, b, and c are coeffcients. It uses the quadratic formula to find the roots of the equation.
